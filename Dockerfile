@@ -2,6 +2,8 @@ FROM node:18-alpine3.19 AS build
 
 WORKDIR /usr/src/app
 
+RUN npm install -g pnpm
+
 RUN apk update && apk add wget
 
 RUN wget -O /usr/local/bin/dockerize https://github.com/jwilder/dockerize/releases/download/v0.6.1/dockerize-linux-amd64-v0.6.1.tar.gz \
