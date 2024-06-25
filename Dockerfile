@@ -12,8 +12,6 @@ RUN wget -O /usr/local/bin/dockerize https://github.com/jwilder/dockerize/releas
 
 COPY pnpm-lock.yaml package.json ./
 
-RUN pnpm add rimraf --save-dev
-
 COPY . .
 
 EXPOSE 3001
